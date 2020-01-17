@@ -1,3 +1,12 @@
+var path = require("path");
+
+module.exports = function(app) {
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/splash.html"));
+  });
+};
+
+/*
 var db = require("../models");
 
 module.exports = function(app) {
@@ -13,6 +22,7 @@ module.exports = function(app) {
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
+    // eslint-disable-next-line prettier/prettier
     db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
       res.render("example", {
         example: dbExample
@@ -25,3 +35,4 @@ module.exports = function(app) {
     res.render("404");
   });
 };
+*/
