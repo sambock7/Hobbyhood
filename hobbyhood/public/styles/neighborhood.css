@@ -1,0 +1,33 @@
+/* General */
+
+body{
+    width: 375px;
+    border: 1px solid black;
+    height: auto;
+    margin: 20px;
+}
+
+
+.navbar{
+    border-bottom: 0.5px solid black;
+}
+
+.search{
+    /* border-left: solid black 0.5px;
+    border-right: solid black 0.5px; */
+    border-bottom: solid black  0.5px;
+    border-radius: 0px;
+}
+
+.map{
+    height: 500px;
+}
+
+.mapouter{
+    width: 375px;
+    margin-left: -1px;
+    border-right: 0.5px solid black;
+    border-left: 0.5px solid black;
+    z-index: -1;
+}
+
