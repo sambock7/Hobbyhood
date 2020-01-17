@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HobbyHood</title>
+    <!-- Bulma -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/hobbyhood/public/styles/create-game.css">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="/hobbyhood/public/js/splash.js"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <div class="Logo"><strong>HobbyHood</strong></div>
+              </a>
+      
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">Search Neighborhoods</a>
+            <a class="navbar-item">Profile</a>
+            <a class="navbar-item">Settings</a>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Create Game Form -->
+
+    <div class="form-container">
+        <h1 class="title">Create Game</h1>
+
+    <!-- Sport -->
+    <div class="field">
+    <label class="label">Sport</label>
+    <div class="control">
+        <div class="select">
+        <select>
+            <option>Basketball</option>
+            <option>Soccer</option>
+            <option>Tennis</option>
+            <option>Football</option>
+        </select>
+        </div>
+    </div>
+    </div>
+    <br>
+
+    <!-- Neighborhood -->
+    <div class="field">
+        <label class="label">Neighborhood</label>
+        <div class="control">
+            <div class="select">
+            <select>
+                <option>Williamsburg</option>
+                <option>Greenpoint</option>
+                <option>Bushwick</option>
+                <option>Bed-Stuy</option>
+            </select>
+            </div>
+        </div>
+        </div>
+        <br>
+
+    <!-- Park -->
+    <div class="field">
+    <label class="label">Park</label>
+    <div class="control">
+        <div class="select">
+        <select>
+            <option>McCarren Park</option>
+            <option>Domino Park</option>
+            <option>East River State Park</option>
+            <option>McGolrick Park</option>
+            <option>Cooper Park</option>
+
+
+        </select>
+        </div>
+    </div>
+    </div>
+        <br>
+
+    <!-- Players -->
+    <div class="field">
+        <label class="label">Match Up</label>
+        <div class="control">
+            <div class="select">
+            <select>
+                <option>1 on 1</option>
+                <option>2 on 2</option>
+                <option>3 on 3</option>
+                <option>4 on 4</option>
+                <option>5 on 5</option>
+    
+    
+            </select>
+            </div>
+        </div>
+        </div>
+            <br>
+
+    <!-- Game Intensity -->
+    <div class="control">
+        <label class="radio"><strong>Game Intensity</strong><br><br>
+        <div class="intensity-radio">
+            <input type="radio" name="distance-select" checked>
+            Casual
+            </label>
+            <label class="radio">
+            <input type="radio" name="distance-select">
+            Competitive
+            </label>
+        </div>
+      </div>
+      <br>
+
+    <!-- Select Day -->
+    <div class="field">
+    <label class="label">Game Day</label>
+    <div class="control">
+        <input class="input" type="date" required>
+    </div>
+    </div>
+    <br>
+
+    <!-- Select Time -->
+    <label for="game-time">
+        <strong>Game Time</strong>
+    </label><br>
+    <input type="time" id="appt" name="appt"
+       min="09:00" max="18:00" required>
+
+      
+    <!-- Button -->
+    <hr>
+    <div class="field is-grouped">
+    <div class="control button-container is-centered">
+        <button class="button is-centered">Create Game</button>
+    </div>
+    </div>
+        
+    </div> <!-- Form Container Close -->
+
+</body>
+</html>
