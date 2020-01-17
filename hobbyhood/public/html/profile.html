@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HobbyHood</title>
+    <!-- Bulma -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/hobbyhood/public/styles/profile.css">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="/hobbyhood/public/js/splash.js"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <div class="Logo"><strong>HobbyHood</strong></div>
+              </a>
+      
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">Search</a>
+            <a class="navbar-item">Profile</a>
+            <a class="navbar-item">Settings</a>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Profile Form -->
+
+    <div class="form-container">
+        <h1 class="title">Profile</h1>
+
+    <!-- Name -->    
+    <div class="field">
+        <label class="label">Name</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Text input">
+        </div>
+      </div>
+      
+    <!-- Email -->
+    <div class="field">
+    <label class="label">Email</label>
+    <div class="control has-icons-left has-icons-right">
+        <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+        <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+        </span>
+        <span class="icon is-small is-right">
+        <i class="fas fa-exclamation-triangle"></i>
+        </span>
+    </div>
+    <p class="help is-danger">This email is invalid</p>
+    </div>
+    
+    <hr>
+
+    <!-- Neighborhood -->
+    <div class="field">
+    <label class="label">My Neighborhood</label>
+    <div class="control">
+        <div class="select">
+        <select>
+            <option>Williamsburg</option>
+            <option>Greenpoint</option>
+            <option>Bushwick</option>
+            <option>Bed-Stuy</option>
+        </select>
+        </div>
+    </div>
+    </div>
+    <br>
+
+    <!-- Distance Radius -->
+    <div class="control">
+        <label class="radio"><strong>Distance Radius (Miles)</strong><br><br>
+        <div class="distance-radio">
+            <input type="radio" name="distance-select" checked>
+            1/4
+            </label>
+            <label class="radio">
+            <input type="radio" name="distance-select">
+            1/2
+            </label>
+            <label class="radio">
+            <input type="radio" name="distance-select">
+            1
+            </label>
+            <input type="radio" name="distance-select">
+            2 
+            </label>
+            <!-- <input type="radio" name="distance-select">
+            5+ Miles
+            </label> -->
+        </div>
+      </div>
+      <br>
+      
+    <!-- Sports -->
+    <div class="sports-checkboxes">
+        <label class="checkbox"><strong>My Sports</strong><br><br>
+        <input type="checkbox">Basketball<br>
+        <input type="checkbox">Soccer<br>
+        <input type="checkbox">Tennis<br>
+        <input type="checkbox">Football<br>
+        </label>
+    </div>
+      
+    <!-- Buttons -->
+    <hr>
+    <div class="field is-grouped">
+    <div class="control">
+        <button class="button">Save Settings</button>
+    </div>
+    <div class="control">
+        <button class="button">Cancel</button>
+    </div>
+    </div>
+        
+    </div> <!-- Form Container Close -->
+
+</body>
+</html>

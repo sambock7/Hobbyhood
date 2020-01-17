@@ -1,0 +1,26 @@
+/* General */
+body{
+    width: 375px;
+    border: 1px solid black;
+    height: auto;
+}
+
+
+/* Navigation */
+.navbar{
+    border-bottom: 0.5px solid black;
+}
+
+/* Form */
+.form-container{
+    padding: 50px;
+}
+
+.title{
+    text-align: center;
+}
+
+.distance-radio{
+    display: flex;
+    justify-content: space-evenly;
+}
