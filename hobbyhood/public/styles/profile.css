@@ -1,8 +1,8 @@
-/* General */
 body{
     width: 375px;
     border: 1px solid black;
     height: auto;
+    margin: 20px;
 }
 
 
