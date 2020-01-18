@@ -1,6 +1,6 @@
-var db = require("../models");
+var db = require("../models"); 
 
-module.exports = function (app) {
+module.exports = function(app) {
 
   // Routes for /api/users ---------------------------------------------------------
 
