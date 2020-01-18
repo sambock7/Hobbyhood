@@ -13,7 +13,7 @@ module.exports = function (app) {
 
   // Get user by user-id
   app.get("/api/users/:id", function (req, res) {
-    db.User.findAll({
+    db.User.findOne({
       where: {
         id: req.params.id
       }
@@ -57,7 +57,7 @@ module.exports = function (app) {
 
   // Get neighborhood by neighborhood-id
   app.get("/api/neighborhoods/:id", function (req, res) {
-    db.Neighborhood.findAll({
+    db.Neighborhood.findOne({
       where: {
         id: req.params.id
       }
@@ -99,7 +99,7 @@ module.exports = function (app) {
 
   // Get park by park-id
   app.get("/api/parks/:id", function (req, res) {
-    db.Park.findAll({
+    db.Park.findOne({
       where: {
         id: req.params.id
       }
@@ -141,7 +141,7 @@ module.exports = function (app) {
 
   // Get sport by sports-id
   app.get("/api/sports/:id", function (req, res) {
-    db.Sport.findAll({
+    db.Sport.findOne({
       where: {
         id: req.params.id
       }
@@ -183,7 +183,7 @@ module.exports = function (app) {
 
   // Get sport by games-id
   app.get("/api/games/:id", function (req, res) {
-    db.Game.findAll({
+    db.Game.findOne({
       where: {
         id: req.params.id
       }
