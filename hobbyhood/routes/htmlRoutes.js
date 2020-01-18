@@ -12,6 +12,22 @@ module.exports = function(app) {
   app.get("/neighborhood", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/html/neighborhood.html"));
   });
+
+  app.get("/join-game", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/join-game.html"));
+  });
+
+  app.get("/login", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/log-in.html"));
+  });
+
+  app.get("/create-game", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/create-game.html"));
+  });
+
+  app.get("/sign-up", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/sign-up.html"));
+  });
 };
 
 /*
