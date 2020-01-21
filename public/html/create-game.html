@@ -53,10 +53,10 @@
     <div class="control">
         <div class="select">
         <select>
-            <option>Basketball</option>
-            <option>Soccer</option>
-            <option>Tennis</option>
-            <option>Football</option>
+            <input type="checkbox"><div id="create-sport-option"></div><br>
+            <input type="checkbox"><div id="create-sport-option"></div><br>
+            <input type="checkbox"><div id="create-sport-option"></div><br>
+            <input type="checkbox"><div id="create-sport-option"></div><br>
         </select>
         </div>
     </div>
@@ -69,10 +69,10 @@
         <div class="control">
             <div class="select">
             <select>
-                <option>Williamsburg</option>
-                <option>Greenpoint</option>
-                <option>Bushwick</option>
-                <option>Bed-Stuy</option>
+                <option><div id="create-neighborhood-option"></div></option>
+                <option><div id="create-neighborhood-option"></div></option>
+                <option><div id="create-neighborhood-option"></div></option>
+                <option><div id="create-neighborhood-option"></div></option>
             </select>
             </div>
         </div>
@@ -85,13 +85,10 @@
     <div class="control">
         <div class="select">
         <select>
-            <option>McCarren Park</option>
-            <option>Domino Park</option>
-            <option>East River State Park</option>
-            <option>McGolrick Park</option>
-            <option>Cooper Park</option>
-
-
+            <option><div id="create-park-option"></div></option>
+            <option><div id="create-park-option"></div></option>
+            <option><div id="create-park-option"></div></option>
+            <option><div id="create-park-option"></div></option>
         </select>
         </div>
     </div>
@@ -104,13 +101,11 @@
         <div class="control">
             <div class="select">
             <select>
-                <option>1 on 1</option>
-                <option>2 on 2</option>
-                <option>3 on 3</option>
-                <option>4 on 4</option>
-                <option>5 on 5</option>
-    
-    
+                <option><div id="create-matchup-option"></div></option>
+                <option><div id="create-matchup-option"></div></option>
+                <option><div id="create-matchup-option"></div></option>
+                <option><div id="create-matchup-option"></div></option>
+                <option><div id="create-matchup-option"></div></option>
             </select>
             </div>
         </div>
@@ -121,11 +116,11 @@
     <div class="control">
         <label class="radio"><strong>Game Intensity</strong><br><br>
         <div class="intensity-radio">
-            <input type="radio" name="distance-select" checked>
+            <input type="radio" name="distance-select" id="create-causal" checked>
             Casual
             </label>
             <label class="radio">
-            <input type="radio" name="distance-select">
+            <input type="radio" name="distance-select" id="create-causal">
             Competitive
             </label>
         </div>
@@ -136,7 +131,7 @@
     <div class="field">
     <label class="label">Game Day</label>
     <div class="control">
-        <input class="input" type="date" required>
+        <input class="input" type="date" id="create-game-time" required>
     </div>
     </div>
     <br>
@@ -146,14 +141,14 @@
         <strong>Game Time</strong>
     </label><br>
     <input type="time" id="appt" name="appt"
-       min="09:00" max="18:00" required>
+       min="09:00" max="18:00" id="create-game-time" required>
 
       
     <!-- Button -->
     <hr>
     <div class="field is-grouped">
     <div class="control button-container is-centered">
-        <button class="button is-centered">Create Game</button>
+        <button class="button is-centered" id="create-game-btn">Create Game</button>
     </div>
     </div>
         

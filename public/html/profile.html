@@ -51,24 +51,16 @@
     <div class="field">
         <label class="label">Name</label>
         <div class="control">
-          <input class="input" type="text" placeholder="Text input">
+          <input class="input" type="text" id="profile-name" placeholder="Text input">
         </div>
       </div>
       
     <!-- Email -->
-    <div class="field">
-    <label class="label">Email</label>
-    <div class="control has-icons-left has-icons-right">
-        <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
-        <span class="icon is-small is-left">
-        <i class="fas fa-envelope"></i>
-        </span>
-        <span class="icon is-small is-right">
-        <i class="fas fa-exclamation-triangle"></i>
-        </span>
+    <div class="control">
+      <label class="label">Email</label>
+        <input class="input" type="email" id="profile-email" placeholder="e.g. alexsmith@gmail.com">
     </div>
-    <p class="help is-danger">This email is invalid</p>
-    </div>
+  </div>
     
     <hr>
 
@@ -78,10 +70,10 @@
     <div class="control">
         <div class="select">
         <select>
-            <option>Williamsburg</option>
-            <option>Greenpoint</option>
-            <option>Bushwick</option>
-            <option>Bed-Stuy</option>
+            <option><div id="profile-neighborhood-option"></div></option>
+            <option><div id="profile-neighborhood-option"></div></option>
+            <option><div id="profile-neighborhood-option"></div></option>
+            <option><div id="profile-neighborhood-option"></div></option>
         </select>
         </div>
     </div>
@@ -116,10 +108,10 @@
     <!-- Sports -->
     <div class="sports-checkboxes">
         <label class="checkbox"><strong>My Sports</strong><br><br>
-        <input type="checkbox">Basketball<br>
-        <input type="checkbox">Soccer<br>
-        <input type="checkbox">Tennis<br>
-        <input type="checkbox">Football<br>
+        <input type="checkbox"><div id="profile-sport-option"></div><br>
+        <input type="checkbox"><div id="profile-sport-option"></div><br>
+        <input type="checkbox"><div id="profile-sport-option"></div><br>
+        <input type="checkbox"><div id="profile-sport-option"></div><br>
         </label>
     </div>
       
@@ -127,10 +119,10 @@
     <hr>
     <div class="field is-grouped">
     <div class="control">
-        <button class="button">Save Settings</button>
+        <button class="button" id="profile-save-btn">Save Profile</button>
     </div>
     <div class="control">
-        <button class="button">Cancel</button>
+        <button class="button" id="profile-cancel-btn">Cancel</button>
     </div>
     </div>
         
