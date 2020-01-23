@@ -1,7 +1,24 @@
 module.exports = function(sequelize, DataTypes) {
-  var Example = sequelize.define("Example", {
-    text: DataTypes.STRING,
-    description: DataTypes.TEXT
+  var Neighborhood = sequelize.define("Neighborhood", {
+    id: {type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true},
+    name: DataTypes.STRING},{
+
+    paranoid: true, 
+    underscored: true,
+    freezeTableName:true
   });
-  return Example;
+
+  Neighborhood.associate = function(models) {
+    // neighborhood belongs to neighborhood_park
+        Neighborhood.belongsTo(models.neighborhoodPark, {
+          foreignKey: {
+            name: 'neighborhoodId',
+            allowNull: false
+          }
+        });
+      };
+
+  return Neighborhood;
 };
+
+

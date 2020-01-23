@@ -1,21 +1,28 @@
 {
   "development": {
-    "username": "sambock",
+    "username": "admin",
     "password": "password",
-    "database": "userdb",
-    "host": "52.14.152.202",
+    "database": "hobbyhood",
+    "host": "3.137.34.84",
+    "port": 3306,
     "dialect": "mysql"
   },
   "test": {
-    "username": "sambock",
+    "username": "admin",
     "password": "password",
-    "database": "userdb_test",
-    "host": "52.14.152.202",
+    "database": "hobbyhood_test",
+    "host": "3.137.34.84",
+    "port": 3306,
     "dialect": "mysql",
     "logging": false
   },
   "production": {
-    "use_env_variable": "JAWSDB_URL",
-    "dialect": "mysql"
+    "username": "admin",
+    "password": "password",
+    "database": "hobbyhood_production",
+    "host": "3.137.34.84",
+    "port": 3306,
+    "dialect": "mysql",
+    "logging": false
   }
 }
