@@ -2,6 +2,7 @@ module.exports = function(sequelize, DataTypes) {
     var Game = sequelize.define("Game", {
       id: {type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true},
       name: DataTypes.STRING,
+
       time: DataTypes.DATE,
       //foreign key from user table
       userId: DataTypes.INTEGER,
@@ -44,6 +45,7 @@ module.exports = function(sequelize, DataTypes) {
             onDelete: "cascade"
           });
         };
+
 
     return Game;
   };
