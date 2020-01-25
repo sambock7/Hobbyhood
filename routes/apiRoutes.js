@@ -4,11 +4,10 @@ var passport = require("passport");
 module.exports = function (app) {
 
   //Route for Log In Authentication
-  app.post('/login',
+  app.post('/login', 
     passport.authenticate('local', {
       successRedirect: '/neighborhood',
-      failureRedirect: '/login',
-      failureFlash: true
+      failureRedirect: '/login'
     })
   );
 
