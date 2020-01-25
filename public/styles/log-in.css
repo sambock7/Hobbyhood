@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     height: 600px;
-    background-color:white;
+    background-color:#072040;
     padding: 0px 50px 50px 50px;
 }
 
@@ -20,14 +20,22 @@
     font-weight: bold;
 }
 
+.title{
+    color: #F2B441;
+}
+
 .subtitle{
     font-size: 16px;
+    color: #F2B441;
 }
 
 .log-in{
     padding: 50px 10px 0px 10px;
 }
 
+.label{
+    color: #F2B441;
+}
 
 
 .button-container{
@@ -42,5 +50,6 @@
     padding: 20px;
     margin: 10px;
     width: 200px;
+    background-color:#D8E6F2;
 }
 
