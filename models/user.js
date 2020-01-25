@@ -19,25 +19,14 @@ module.exports = function(sequelize, DataTypes) {
 
   User.associate = function(models) {
 // user belongs to game_user, user_sport, game
-    // User.belongsTo(models.gameUser, {
-    //   foreignKey: {
-    //     name: 'userId',
-    //     allowNull: false
-    //   }
-    // });
-    
-    // User.belongsTo(models.userSport, {
-    //   foreignKey: {
-    //     name: 'userId',
-    //     allowNull: false
-    //   }
-    // });
 
-    User.hasMany(models.Game, {
+    User.hasMany(models.gameUser, {
       onDelete: "cascade"
+    });
+    User.hasMany(models.userSport, {
+   
     });
   };
 
   return User;
 };
-

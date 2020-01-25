@@ -12,11 +12,17 @@ module.exports = function(sequelize, DataTypes) {
 
     userSport.associate = function(models) {
         // userSport has many users and sports
-            userSport.hasMany(models.User, {
-              onDelete: "cascade"
+            userSport.belongsTo(models.User, {
+              foreignKey: {
+                name: 'userId',
+                allowNull: false
+              }
             });
-            userSport.hasMany(models.Sport, {
-              onDelete: "cascade"
+            userSport.belongsTo(models.Sport, {
+              foreignKey: {
+                name: 'sportId',
+                allowNull: false
+              }
             });
           };
 

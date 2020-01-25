@@ -14,11 +14,17 @@ module.exports = function(sequelize, DataTypes) {
 
     gamePark.associate = function(models) {
         // gamePark has many games and has many parks
-            gamePark.hasMany(models.Game, {
-              onDelete: "cascade"
+            gamePark.belongsTo(models.Game, {
+              foreignKey: {
+                name: 'gameId',
+                allowNull: false
+              }
             });
-            gamePark.hasMany(models.Park, {
-              onDelete: "cascade"
+            gamePark.belongsTo(models.Park, {
+              foreignKey: {
+                name: 'parkId',
+                allowNull: false
+              }
             });
           };
 

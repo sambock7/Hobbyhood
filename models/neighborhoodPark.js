@@ -12,11 +12,17 @@ module.exports = function(sequelize, DataTypes) {
 
     neighborhoodPark.associate = function(models) {
         // neighborhoodPark has many neighborhoods and has many parks
-            neighborhoodPark.hasMany(models.Neighborhood, {
-              onDelete: "cascade"
+            neighborhoodPark.belongsTo(models.Neighborhood, {
+              foreignKey: {
+                name: 'neigborhoodId',
+                allowNull: false
+              }
             });
-            neighborhoodPark.hasMany(models.Park, {
-              onDelete: "cascade"
+            neighborhoodPark.belongsTo(models.Park, {
+              foreignKey: {
+                name: 'parkId',
+                allowNull: false
+              }
             });
           };
 

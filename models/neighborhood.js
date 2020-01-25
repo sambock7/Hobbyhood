@@ -10,11 +10,8 @@ module.exports = function(sequelize, DataTypes) {
 
   Neighborhood.associate = function(models) {
     // neighborhood belongs to neighborhood_park
-        Neighborhood.belongsTo(models.neighborhoodPark, {
-          foreignKey: {
-            name: 'neighborhoodId',
-            allowNull: false
-          }
+        Neighborhood.hasMany(models.neighborhoodPark, {
+          onDelete: "cascade"
         });
       };
 
