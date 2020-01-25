@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     var Game = sequelize.define("Game", {
-      id: {type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true},
+      //id: {type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true},
       name: DataTypes.STRING,
 
       time: DataTypes.DATE,
@@ -23,8 +23,10 @@ module.exports = function(sequelize, DataTypes) {
           Game.hasMany(models.gamePark, {
             onDelete: "cascade"
           });
+      
           Game.hasMany(models.gameSport, {
             onDelete: "cascade"
+
           });
           Game.hasMany(models.gameUser, {
             onDelete: "cascade"

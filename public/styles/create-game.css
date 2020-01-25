@@ -1,15 +1,20 @@
 /* Form */
 .form-container{
     padding: 50px;
+    background-color:#072040;
 }
 
 .title{
     text-align: center;
+    color: #F2B441;
 }
 
-.distance-radio{
-    display: flex;
-    justify-content: space-between;
+.input-title{
+    color: #F2B441;
+}
+
+.intensity-radio{
+        color: white;
 }
 
 .button-container{
@@ -20,4 +25,5 @@
 .button {
     width: 200px;
     margin-left: 35px;
+    background-color:#D8E6F2;
 }
