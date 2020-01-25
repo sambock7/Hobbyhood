@@ -1,10 +1,16 @@
 /* Form */
 .form-container{
     padding: 50px;
+    background-color:#072040;
 }
 
 .title{
     text-align: center;
+    color: #F2B441;
+}
+
+.input-title{
+    color: #F2B441;
 }
 
 .distance-radio{
@@ -20,4 +26,5 @@
 .button {
     width: 200px;
     margin-left: 35px;
+    background-color:#D8E6F2;
 }
