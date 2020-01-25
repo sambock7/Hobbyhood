@@ -10,5 +10,14 @@ body{
 }
 
 .navbar{
-  border-bottom: 0.5px solid black;
+  border-bottom: 0.5px solid #072040;
+  background-color:#072040;
+}
+
+.navbar-item{
+  color: #F2B441
+}
+
+.navbar-burger{
+  color: #F2B441
 }
