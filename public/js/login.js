@@ -1,4 +1,4 @@
-$(function(){
+$(function () {
     // Add User to DB when signing up
     $("#signup-btn").on("click", function (event) {
         event.preventDefault();
@@ -6,7 +6,7 @@ $(function(){
 
         var newUser = {
             email: $("#emailInput").val().trim(),
-            password: $("#passwdInput").val().trim()
+            password_hash: $("#passwdInput").val().trim()
         }
 
         $.ajax("/api/users", {
@@ -21,4 +21,35 @@ $(function(){
         )
     });
 
+    $("#login-btn").on("click", function (event) {
+        event.preventDefault();
+        console.log("You clicked another button!");
+
+        $.ajax("/login", {
+            type: "POST",
+            dataType: "json",
+            data: {
+                email: $("#emailInput").val().trim(),
+                password_hash: $("#passwdInput").val().trim()
+            }
+        }).then(
+            function() {
+                console.log("You logged in!");
+            }
+        )
+    })
+
 });
+
+/*
+$.ajax({
+            type: "POST",
+            dataType: 'json',
+            data: { "email": un.val(), "password": pwd.val() },
+            url: "/rest/login/?format=json",
+            success: function (data) {
+                window.location.href = '/somewhereElse'
+            }
+        });
+    }
+    */
