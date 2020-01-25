@@ -1,13 +1,30 @@
 /* Form */
 .form-container{
     padding: 50px;
+    background-color:#072040;
 }
 
 .title{
     text-align: center;
+    color: #F2B441;
+}
+
+.input-title{
+    color: #F2B441;
 }
 
 .distance-radio{
     display: flex;
     justify-content: space-evenly;
+    color: white;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    background-color:#D8E6F2;
+    padding-right: 30px;
 }
