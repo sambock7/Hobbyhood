@@ -2,7 +2,6 @@ $(function () {
     // Add User to DB when signing up
     $("#signup-btn").on("click", function (event) {
         event.preventDefault();
-        console.log("You clicked a button!");
 
         var newUser = {
             email: $("#emailInput").val().trim(),
@@ -14,7 +13,6 @@ $(function () {
             data: newUser
         }).then(
             function () {
-                console.log("Added new User!");
                 window.location.href = "/login";
                 return false;
             }
@@ -30,7 +28,11 @@ $(function () {
             dataType: "json",
             data: {
                 email: $("#emailInput").val().trim(),
-                password_hash: $("#passwdInput").val().trim()
+                passwd: $("#passwdInput").val().trim(),
+                url: "/rest/login/?format=json",
+                success: function(data) {
+                    window.location.href='/create-game'
+                }
             }
         }).then(
             function() {

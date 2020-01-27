@@ -62,14 +62,12 @@ $(function () {
     // on-click event to POST new game
     $("#create-game-btn").on("click", function (event) {
         event.preventDefault();
-        console.log("You clicked a button!");
 
         var gameTime = $("#create-game-date").val() + " " + $("#appt").val();
 
         var newGame = {
             name: $("#game-name").val().trim(),
             time: gameTime,
-            userId: "",
             parkId: $(".create-park-dropdown option:selected").attr("data-parkId")
         }
 
@@ -84,19 +82,5 @@ $(function () {
             }
         )
     });
-
-
-
-
-    console.log("sport id: " + $(".create-sport-dropdown option:selected").attr("data-sportId"));
-    console.log("sport name: " + $(".create-sport-dropdown option:selected").attr("data-sportName"));
-    console.log("game name: " + $("#game-name").val().trim());
-    console.log("park id: " + $(".create-park-dropdown option:selected").attr("data-parkId"));
-    console.log("park name: " + $(".create-park-dropdown option:selected").attr("data-parkName"));
-    console.log("match up: " + $(".create-matchup-dropdown option:selected").attr("data-matchup"));
-    console.log("intensity selected: " + $("input[name='intensity-select']:checked").val());
-    console.log("date picked: " + $("#create-game-date").val());
-    console.log("time picked: " + $("#appt").val());
-
 
 });
