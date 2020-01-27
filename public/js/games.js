@@ -1,5 +1,4 @@
 $(function () {
-
     // GET all games to append to join-game page
     $.ajax({
         url: "/api/games",
@@ -23,7 +22,6 @@ $(function () {
             game.append("<br>");
             game.append(button);
             $("#game-div").append(game);
-
         }
     })
 
