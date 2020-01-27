@@ -1,5 +1,32 @@
 $(function () {
 
+    // GET all games to append to join-game page
+    $.ajax({
+        url: "/api/games",
+        method: "GET"
+    }).done(function (response) {
+        $("#game-div").empty();
+        for (i = 0; i < response.length; i ++) {
+
+            var game = $("<div>");
+            var gameName = $("<p>");
+            var gameTime = $("<p>");
+            var button = $("<button class='join-game-btn'>Join Game</button>");
+            button.attr("data-game-id", response[i].id);
+            button.addClass("button");
+            game.addClass("row");
+            gameName.text(response[i].name);
+            gameTime.text(response[i].time);
+            game.append("<hr>");
+            game.append(gameName);
+            game.append(gameTime);
+            game.append("<br>");
+            game.append(button);
+            $("#game-div").append(game);
+
+        }
+    })
+
     // GET all sports and append to drop-down select for sports
     $.ajax({
         url: "/api/sports",
