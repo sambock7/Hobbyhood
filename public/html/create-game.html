@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +13,13 @@
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/create-game.css">
     <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!-- Custom JS -->
     <script src="js/splash.js"></script>
     <script src="js/games.js"></script>
 </head>
+
 <body>
 
     <!-- Navigation -->
@@ -25,98 +28,94 @@
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
                 <div class="Logo"><strong>HobbyHood</strong></div>
-              </a>
-      
-          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
-      
+
         <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="/neighborhood">Explore</a>
-            <a class="navbar-item" href="/profile">Profile</a>
-            <!-- <a class="navbar-item" href="#">Settings</a> -->
-          </div>
+            <div class="navbar-start">
+                <a class="navbar-item" href="/neighborhood">Explore</a>
+                <a class="navbar-item" href="/profile">Profile</a>
+                <!-- <a class="navbar-item" href="#">Settings</a> -->
+            </div>
         </div>
-      </nav>
+    </nav>
 
     <!-- Create Game Form -->
 
     <div class="form-container">
         <h1 class="title">Create Game</h1>
 
-    <!-- Sport -->
-    <div class="field">
-    <label class="label input-title">Sport</label>
-    <div class="control">
-        <div class="select">
-        <select class="create-sport-dropdown">
-        </select>
+        <!-- Sport -->
+        <div class="field">
+            <label class="label input-title">Sport</label>
+            <div class="control">
+                <div class="select">
+                    <select class="create-sport-dropdown">
+                    </select>
+                </div>
+            </div>
         </div>
-    </div>
+        <br>
+
+        <!-- Game Name -->
+        <div class="field">
+            <label class="label input-title">Game Name</label>
+            <input id="game-name" class="input" type="text" placeholder="Pick-up Game"></input>
+        </div>
+        <br>
+
+        <!-- Park -->
+        <div class="field">
+            <label class="label input-title">Park</label>
+            <div class="control">
+                <div class="select">
+                    <select class="create-park-dropdown">
+                    </select>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <!-- Players -->
+        <div class="field">
+            <label class="label input-title">Match Up</label>
+            <div class="control">
+                <div class="select">
+                    <select class="create-matchup-dropdown">
+                    </select>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <!-- Game Intensity -->
+        <div class="control">
+            <label class="radio "><strong class="input-title">Game Intensity</strong><br><br>
+                <div class="intensity-radio">
+                    <input type="radio" name="intensity-select" id="create-causal" value="casual" checked>
+                    Casual
+            </label>
+            <label class="radio">
+                <input type="radio" name="intensity-select" id="create-competitive" value="competitive">
+                Competitive
+            </label>
+        </div>
     </div>
     <br>
 
-    <!-- Neighborhood -->
-    <div class="field">
-        <label class="label input-title">Neighborhood</label>
-        <div class="control">
-            <div class="select">
-            <select class="create-neighorhood-dropdown">
-            </select>
-            </div>
-        </div>
-        </div>
-        <br>
-
-    <!-- Park -->
-    <div class="field">
-    <label class="label input-title">Park</label>
-    <div class="control">
-        <div class="select">
-        <select class="create-park-dropdown">
-        </select>
-        </div>
-    </div>
-    </div>
-        <br>
-
-    <!-- Players -->
-    <div class="field">
-        <label class="label input-title">Match Up</label>
-        <div class="control">
-            <div class="select">
-            <select class="create-matchup-dropdown">
-            </select>
-            </div>
-        </div>
-        </div>
-            <br>
-
-    <!-- Game Intensity -->
-    <div class="control">
-        <label class="radio "><strong class="input-title">Game Intensity</strong><br><br>
-        <div class="intensity-radio">
-            <input type="radio" name="intensity-select" id="create-causal" checked>
-            Casual
-            </label>
-            <label class="radio">
-            <input type="radio" name="intensity-select" id="create-competitive">
-            Competitive
-            </label>
-        </div>
-      </div>
-      <br>
-
     <!-- Select Day -->
     <div class="field">
-    <label class="label input-title">Game Day</label>
-    <div class="control">
-        <input class="input" type="date" id="create-game-date" required>
-    </div>
+        <label class="label input-title">Game Day</label>
+        <div class="control">
+            <input class="input" type="date" id="create-game-date" required>
+        </div>
     </div>
     <br>
 
@@ -124,19 +123,19 @@
     <label for="game-time">
         <strong class="input-title">Game Time</strong>
     </label><br>
-    <input type="time" id="appt" name="appt"
-       min="09:00" max="18:00" id="create-game-time" required>
+    <input type="time" id="appt" name="appt" min="09:00" max="18:00" id="create-game-time" required>
 
-      
+
     <!-- Button -->
     <hr>
     <div class="field is-grouped">
-    <div class="control button-container is-centered">
-        <button class="button is-centered" id="create-game-btn">Create Game</button>
+        <div class="control button-container is-centered">
+            <button class="button is-centered" id="create-game-btn">Create Game</button>
+        </div>
     </div>
-    </div>
-        
+
     </div> <!-- Form Container Close -->
 
 </body>
+
 </html>
