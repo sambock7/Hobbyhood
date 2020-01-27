@@ -7,7 +7,7 @@ module.exports = function (app) {
   app.post('/login', 
     passport.authenticate('local', {
       successRedirect: '/neighborhood',
-      failureRedirect: '/login'
+      failureRedirect: '/login',
     })
   );
 

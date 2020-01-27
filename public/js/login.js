@@ -31,7 +31,7 @@ $(function () {
                 passwd: $("#passwdInput").val().trim(),
                 url: "/rest/login/?format=json",
                 success: function(data) {
-                    window.location.href='/create-game'
+                    window.location.href='/neighborhood'
                 }
             }
         }).then(
@@ -42,16 +42,3 @@ $(function () {
     })
 
 });
-
-/*
-$.ajax({
-            type: "POST",
-            dataType: 'json',
-            data: { "email": un.val(), "password": pwd.val() },
-            url: "/rest/login/?format=json",
-            success: function (data) {
-                window.location.href = '/somewhereElse'
-            }
-        });
-    }
-    */

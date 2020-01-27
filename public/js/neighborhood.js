@@ -1,6 +1,4 @@
 $(function() {
-  
-  console.log("testing 1,2,3...");
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiYWNoYXRtYWppYW4iLCJhIjoiY2s1cHp3YXlpMDI5cDNvbnZ0NGdsdG1iNSJ9.Qg1Dwtxq3HX2lJ6cBYWDhA';
 var map = new mapboxgl.Map({
