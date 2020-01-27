@@ -7,14 +7,9 @@ module.exports = function (app) {
   app.post('/login', 
     passport.authenticate('local', {
       successRedirect: '/neighborhood',
-      failureRedirect: '/login'
+      failureRedirect: '/login',
     })
   );
-
-  app.get("/login", function(req, res) {
-    var user_id = req.user.user_id
-    console.log(user_id);
-  })
 
 
 

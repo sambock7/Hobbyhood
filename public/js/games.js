@@ -11,9 +11,10 @@ $(function () {
             var game = $("<div>");
             var gameName = $("<p>");
             var gameTime = $("<p>");
-            var button = $("<button class='join-game-btn'>Join Game</button>");
+            var button = $("<button>Join Game</button>");
             button.attr("data-game-id", response[i].id);
             button.addClass("button");
+            button.addClass("join-game-btn");
             game.addClass("row");
             gameName.text(response[i].name);
             gameTime.text(response[i].time);
@@ -108,6 +109,12 @@ $(function () {
                 return false;
             }
         )
+    });
+
+    // on-click event to join existing game
+    $(".join-game-btn").on("click", function (event) {
+        event.preventDefault();
+        console.log("joined game!");
     });
 
 });
