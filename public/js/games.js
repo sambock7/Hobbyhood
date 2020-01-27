@@ -46,5 +46,4 @@ $(function () {
             $(".create-park-dropdown").append(option);
         }
     });
-
 });
