@@ -11,6 +11,11 @@ module.exports = function (app) {
     })
   );
 
+  app.get("/login", function(req, res) {
+    var user_id = req.user.user_id
+    console.log(user_id);
+  })
+
 
 
   // Routes for /api/users ---------------------------------------------------------

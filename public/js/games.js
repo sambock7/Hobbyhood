@@ -116,5 +116,4 @@ $(function () {
         event.preventDefault();
         console.log("joined game!");
     });
-
 });
