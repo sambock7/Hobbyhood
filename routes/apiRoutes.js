@@ -1,4 +1,5 @@
 var db = require("../models");
+
 var passport = require("passport");
 
 module.exports = function (app) {
@@ -10,11 +11,6 @@ module.exports = function (app) {
       failureRedirect: '/login',
     })
   );
-
-  app.get("/login", function(req, res) {
-    var user_id = req.user.user_id
-    console.log(user_id);
-  })
 
 
 
