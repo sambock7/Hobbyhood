@@ -1,4 +1,5 @@
 $(function () {
+   
     // GET all games to append to join-game page
     $.ajax({
         url: "/api/games",
@@ -10,36 +11,10 @@ $(function () {
             var game = $("<div>");
             var gameName = $("<p>");
             var gameTime = $("<p>");
-            var button = $("<button class='join-game-btn'>Join Game</button>");
+            var button = $("<a href='/neighborhood'>Join Game</a>");
             button.attr("data-game-id", response[i].id);
             button.addClass("button");
-            game.addClass("row");
-            gameName.text(response[i].name);
-            gameTime.text(response[i].time);
-            game.append("<hr>");
-            game.append(gameName);
-            game.append(gameTime);
-            game.append("<br>");
-            game.append(button);
-            $("#game-div").append(game);
-        }
-    })
-
-    // GET all games to append to join-game page
-    $.ajax({
-        url: "/api/games",
-        method: "GET"
-    }).done(function (response) {
-        $("#game-div").empty();
-        for (i = 0; i < response.length; i ++) {
-
-            var game = $("<div>");
-            var gameName = $("<p>");
-            var gameTime = $("<p>");
-            var button = $("<button>Join Game</button>");
-            button.attr("data-game-id", response[i].id);
-            button.addClass("button");
-            button.addClass("join-game-btn");
+            button.attr("id", response[i].id);
             game.addClass("row");
             gameName.text(response[i].name);
             gameTime.text(response[i].time);
@@ -137,8 +112,18 @@ $(function () {
     });
 
     // on-click event to join existing game
-    $(".join-game-btn").on("click", function (event) {
-        event.preventDefault();
+
+    var gameIdArr = [1,2,3,4,5,6,7,8,9,10];
+    for (i = 0; i < gameIdArr.length; i++) {
+        var gameIdNo = gameIdArr[i];
+        $("#"+gameIdNo).click(function() {
+            console.log("joined game!");
+            window.location.href="/neighborhood";
+        })
+    }
+    $("#join-btn").click(function(){
         console.log("joined game!");
+        window.location.href="/neighborhood";
     });
+
 });
