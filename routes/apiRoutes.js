@@ -13,7 +13,6 @@ module.exports = function (app) {
   );
 
 
-
   // Routes for /api/users ---------------------------------------------------------
 
   // Get all users
