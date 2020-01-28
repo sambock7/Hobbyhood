@@ -1,5 +1,5 @@
 $(function () {
-
+   
     // GET all games to append to join-game page
     $.ajax({
         url: "/api/games",
@@ -112,6 +112,7 @@ $(function () {
     });
 
     // on-click event to join existing game
+
     var gameIdArr = [1,2,3,4,5,6,7,8,9,10];
     for (i = 0; i < gameIdArr.length; i++) {
         var gameIdNo = gameIdArr[i];
