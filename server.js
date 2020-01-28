@@ -11,6 +11,7 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 /*Heroku JawsDB connection
+
 var mysql = require("mysql");
 var connection;
 
@@ -27,6 +28,7 @@ if (process.env.JAWSDB_URL) {
 
 connection.connect();
 module.exports = connection;
+
 */
 
 // Middleware
