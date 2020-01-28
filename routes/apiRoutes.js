@@ -120,6 +120,18 @@ module.exports = function (app) {
       })
   });
 
+    // Get park by park-name
+    app.get("/api/parks/name/:name", function (req, res) {
+      db.Park.findOne({
+        where: {
+          name: req.params.name
+        }
+      })
+        .then(function (dbParks) {
+          res.json(dbParks);
+        })
+    });
+
   // Create a new park
   app.post("/api/parks", function (req, res) {
     db.Park.create(req.body).then(function (dbParks) {

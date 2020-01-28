@@ -20,6 +20,7 @@
   <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
   <!-- Custom JS -->
   <script src="js/splash.js"></script>
+  <!-- <script src="js/search.js"></script> -->
   <script type="text/javascript" src="js/neighborhood.js"></script>
 </head>
 
@@ -54,7 +55,9 @@
 
   <!-- Search Bar -->
   <div class="search-container">
-    <input class="input search" type="text" placeholder="Search Neighborhoods">
+    <input id= "park-name" class="input search" type="text" value="Beattie-Square" placeholder="Search Parks">
+    <td><button type="submit" class="btn btn-success" id="park-button">Go</button>
+    </td>
   </div>
   <!-- Map -->
   <div class="map-container">
