@@ -10,6 +10,24 @@ var bodyParser = require("body-parser");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
+// Heroku JawsDB connection
+var mysql = require("mysql");
+var connection;
+
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+    host: "3.137.34.84",
+    user: "admin",
+    password: "password",
+    database: "hobbyhood"
+  })
+}
+
+connection.connect();
+module.exports = connection;
+
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
